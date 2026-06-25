@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loading Website...</title>
-  <!-- Tailwind is not used. Custom templates.css handles styling -->
-  <link rel="stylesheet" href="templates.css">
+
+  <link rel="stylesheet" href="/templates.css">
+
   <style>
-    /* Global simple loading skeleton styles */
     .skeleton-loader {
       display: flex;
       flex-direction: column;
@@ -17,23 +17,24 @@
       font-family: sans-serif;
       color: #666;
     }
+
     .loader-ring {
       width: 40px;
       height: 40px;
       border: 3px solid #f3f3f3;
       border-top: 3px solid #6366f1;
       border-radius: 50%;
-      animation: spin 1c linear infinite;
       animation: spin 1s linear infinite;
       margin-bottom: 1rem;
     }
+
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
   </style>
 </head>
-<body style="margin: 0; padding: 0;">
 
+<body style="margin: 0; padding: 0;">
   <div id="site-root">
     <div class="skeleton-loader">
       <div class="loader-ring"></div>
@@ -41,9 +42,9 @@
     </div>
   </div>
 
-  <script src="main.js"></script>
-  <script src="api.js"></script>
-  <script src="templates.js"></script>
-  <script src="site.js"></script>
+  <script src="/main.js"></script>
+  <script src="/api.js"></script>
+  <script src="/templates.js"></script>
+  <script src="/site.js"></script>
 </body>
 </html>
