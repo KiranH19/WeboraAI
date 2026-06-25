@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webora | Chat Builder</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="chat-page">
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="container">
+      <a href="/" class="logo">Webora<span>.</span></a>
+      <nav>
+        <ul>
+          <li><a href="/">Landing Page</a></li>
+          <li><a href="/admin.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- WhatsApp Chat Container -->
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="bot-avatar">🤖</div>
+      <div class="bot-info">
+        <h3>Webora Assistant</h3>
+        <p>Online</p>
+      </div>
+    </div>
+    
+    <div class="chat-history" id="chat-history">
+      <!-- Chat history messages will be injected here via chat.js -->
+    </div>
+
+    <form class="chat-input-area" id="chat-form" novalidate>
+      <input 
+        type="text" 
+        id="chat-input" 
+        placeholder="Type a message..." 
+        autocomplete="off" 
+        required
+      >
+      <button type="submit" class="chat-send-btn" id="send-btn" aria-label="Send Message">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+
+  <!-- Progress/Generation Overlay -->
+  <div class="progress-overlay" id="progress-overlay" style="display: none;">
+    <div class="progress-card">
+      <div class="spinner"></div>
+      <h2 style="margin-bottom: 0.5rem; font-family: var(--font-primary);">Drafting Website</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">Grok is writing professional copies, course layouts, FAQ answers, and setting up your metadata... This may take up to 10 seconds.</p>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/chat.js"></script>
+</body>
+</html>

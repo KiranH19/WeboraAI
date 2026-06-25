@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webora | Admin Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="admin-page">
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container">
+      <a href="/" class="logo">Webora<span>.</span></a>
+      <nav>
+        <ul>
+          <li><a href="/">Landing Page</a></li>
+          <li><a href="/chat.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Generate Website</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="section-title" style="text-align: left; margin-bottom: 2rem;">
+      <h2>System Admin Dashboard</h2>
+      <p>Monitor generated business sites, payment transactions, and customer inquiries.</p>
+    </div>
+
+    <!-- KPIs Stats Grid -->
+    <div class="admin-grid">
+      <div class="admin-stat-card">
+        <span class="value" id="stat-total-websites">0</span>
+        <span class="label">Total Websites</span>
+      </div>
+      <div class="admin-stat-card">
+        <span class="value" id="stat-paid-websites" style="color: var(--success);">0</span>
+        <span class="label">Paid & Published</span>
+      </div>
+      <div class="admin-stat-card">
+        <span class="value" id="stat-pending-websites" style="color: #ffbd2e;">0</span>
+        <span class="label">Pending Payments</span>
+      </div>
+      <div class="admin-stat-card">
+        <span class="value" id="stat-total-leads" style="color: var(--text-white);">0</span>
+        <span class="label">Customer Leads Captured</span>
+      </div>
+    </div>
+
+    <!-- Websites Management List -->
+    <div class="admin-table-section">
+      <h3>Generated Websites</h3>
+      <table id="websites-table">
+        <thead>
+          <tr>
+            <th>Business Name</th>
+            <th>Category</th>
+            <th>Template Style</th>
+            <th>Subscription Plan</th>
+            <th>Payment Status</th>
+            <th>Launch Slug</th>
+            <th>Created Date</th>
+          </tr>
+        </thead>
+        <tbody id="websites-tbody">
+          <tr>
+            <td colspan="7" style="text-align: center; color: var(--text-muted);">Loading websites data...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Customer Leads Captured -->
+    <div class="admin-table-section">
+      <h3>Customer Inquiries (Leads)</h3>
+      <table id="leads-table">
+        <thead>
+          <tr>
+            <th>Target Website</th>
+            <th>Customer Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Message details</th>
+            <th>Submission Date</th>
+          </tr>
+        </thead>
+        <tbody id="leads-tbody">
+          <tr>
+            <td colspan="6" style="text-align: center; color: var(--text-muted);">Loading lead inquiry data...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <footer style="border-top: 1px solid var(--border-color); padding: 3rem 0; text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-top: 4rem;">
+    <div class="container">
+      <p>&copy; Webora Admin Panel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
