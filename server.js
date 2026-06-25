@@ -18,10 +18,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Connect API Routes
 const aiRoutes = require('./ai');
-const websiteRoutes = require('./routes/websites');
-const leadRoutes = require('./routes/leads');
-const paymentRoutes = require('./routes/payments');
-const adminRoutes = require('./routes/admin');
+const websiteRoutes = require('./websites');
+const leadRoutes = require('./leads');
+const paymentRoutes = require('./payments');
+const adminRoutes = require('./admin');
 
 app.use('/api', aiRoutes); // handles /api/generate
 app.use('/api/websites', websiteRoutes); // handles /api/websites/publish, /api/websites/
