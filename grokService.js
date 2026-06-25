@@ -1,5 +1,5 @@
 const axios = require('axios');
-const cleanAndValidateJson = require('../utils/validateJson');
+const cleanAndValidateJson = require('./validateJson');
 require('dotenv').config();
 
 const GROK_API_KEY = process.env.GROK_API_KEY;
