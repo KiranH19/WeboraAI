@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const razorpayService = require('../services/razorpayService');
-const supabaseService = require('../services/supabaseService');
-const slugify = require('../utils/slugify');
+const razorpayService = require('./razorpayService');
+const supabaseService = require('./supabaseService');
+const slugify = require('./slugify');
 
 /**
  * POST /api/payments/create-order
