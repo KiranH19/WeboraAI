@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve frontend files statically
-app.use(express.static(path.join(__dirname));
+app.use(express.static(path.join(__dirname)));
 
 // Connect API Routes
 const aiRoutes = require('./ai');
