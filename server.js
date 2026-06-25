@@ -4,7 +4,7 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5050;
 
 // Enable CORS
 app.use(cors());
@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve frontend files statically
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname));
 
 // Connect API Routes
 const aiRoutes = require('./ai');
@@ -31,7 +31,7 @@ app.use('/api/admin', adminRoutes); // handles /api/admin/websites, /api/admin/l
 
 // Fallback route: Serve landing page for any other route
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Start listening
