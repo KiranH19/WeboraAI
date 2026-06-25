@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const supabaseService = require('../services/supabaseService');
+const supabaseService = require('./supabaseService');
 const slugify = require('../utils/slugify');
 
 /**
