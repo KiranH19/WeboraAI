@@ -41,3 +41,7 @@ app.listen(PORT, () => {
   console.log(`Access the landing page at: http://localhost:${PORT}`);
   console.log(`==================================================`);
 });
+
+app.get("/", (req, res) => {
+  res.send("Webora is live");
+});
