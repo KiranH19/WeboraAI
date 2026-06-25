@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const rateLimit = require('express-rate-limit');
-const { generateWebsiteContent } = require('../services/grokService');
+const { generateWebsiteContent } = require('./grokService');
 const supabaseService = require('../services/supabaseService');
 
 // Apply rate limiting specifically for content generation to prevent API abuse
