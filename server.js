@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Connect API Routes
-const aiRoutes = require('./routes/ai');
+const aiRoutes = require('./ai');
 const websiteRoutes = require('./routes/websites');
 const leadRoutes = require('./routes/leads');
 const paymentRoutes = require('./routes/payments');
